@@ -1,0 +1,343 @@
+body {
+	background: #f6f4f5;
+	font-family: "Microsoft YaHei";
+}
+
+.loginWrap {
+	width: 1000px;
+}
+
+.loginForm {
+	background: #fff;
+	padding: 60px 25px 160px;
+}
+
+.loginWrap .loginForm .loginTitle {
+	width: 212px;
+	overflow: hidden;
+	height: 24px;
+	line-height: 24px;
+}
+
+.loginInputWrap .labInpWr .label span {
+	font-size: 16px;
+	color: #333;
+}
+
+.loginWrap .loginForm .loginTitle b {
+	float: right;
+	color: #333;
+	height: 24px;
+	font-size: 22px;
+	padding-left: 13px;
+	border-left: 3px solid #e60000;
+	font-weight: bold;
+}
+
+.loginInputWrap {
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.loginInputWrap .labInpWr .label {
+	float: left;
+	height: 42px;
+	padding-right: 23px;
+	line-height: 42px;
+	width: 212px;
+	text-align: right;
+}
+
+.loginInputWrap .labInpWr .label {
+	padding-top: 0;
+	float: left;
+	height: 42px;
+	padding-right: 23px;
+	line-height: 42px;
+	width: 212px;
+	text-align: right;
+}
+
+.loginInputWrap .inputItem {
+	padding-bottom: 30px;
+	overflow: hidden;
+	position: relative;
+}
+
+.loginInputWrap .labInpWr {
+	overflow: hidden;
+}
+
+.loginInputWrap .megTip {
+	display: none;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	bottom: 0px;
+	left: 235px;
+}
+
+.loginInputWrap .inputItem.focus .inputWrap {
+	color: #666;
+	border: 1px solid #666666;
+}
+
+.loginInputWrap .labInpWr .inputWrap {
+	border-radius: 4px;
+	overflow: hidden;
+	float: left;
+	height: 40px;
+	border: 1px solid #dcdcdc;
+	width: 303px;
+	padding-right: 35px;
+	position: relative;
+}
+
+.loginInputWrap .labInpWr .inputWrap .inputPad {
+	padding: 10px 0;
+	display: block;
+}
+
+.loginInputWrap .labInpWr .inputWrap .inputBlock {
+	color: #666;
+	border: none;
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-indent: 10px;
+}
+
+.loginInputWrap .labInpWr {
+	padding-left: 20px;
+	overflow: hidden;
+}
+
+.loginInputWrap .labInpWr .label {
+	float: left;
+	height: 42px;
+	padding-right: 23px;
+	line-height: 42px;
+	width: 212px;
+	text-align: right;
+}
+
+.loginInputWrap .labInpWr .inputWrap.imgCodeWrap {
+	width: 160px;
+}
+
+.loginInputWrap .labInpWr .inputWrap {
+	border-radius: 4px;
+	overflow: hidden;
+	float: left;
+	height: 40px;
+	border: 1px solid #dcdcdc;
+	width: 303px;
+	padding-right: 35px;
+	position: relative;
+}
+
+.loginInputWrap .labInpWr .inputWrap .inputPad {
+	padding: 10px 0;
+	display: block;
+}
+
+.loginInputWrap .labInpWr .inputWrap .inputBlock {
+	color: #666;
+	border: none;
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-indent: 10px;
+}
+
+.loginInputWrap .labInpWr .changeImgCoad a {
+	color: #1c51a1;
+	margin-left: 10px;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.loginInputWrap .labInpWr .imgWrap {
+	width: 86px;
+	float: left;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.loginInputWrap .labInpWr .imgWrap img {
+	height: 40px;
+	display: block;
+	width: 86px;
+}
+
+.loginInputWrap .labInpWr .changeImgCoad {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+
+.loginInputWrap .loginBtn {
+	margin: 23px 0 0 235px;
+}
+
+.loginInputWrap .loginBtn a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	width: 380px;
+	text-align: center;
+	text-decoration: none;
+	background: blue;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 3px;
+}
+
+.loginInputWrap .otherLink {
+	margin: 25px 0 0 235px;
+	width: 380px;
+	overflow: hidden;
+	line-height: 24px;
+}
+
+.loginInputWrap .otherLink .fogotPas {
+	float: left;
+}
+
+.loginInputWrap .otherLink .newUserReg {
+	float: right;
+}
+
+.loginInputWrap .otherLink a {
+	color: #666a6b;
+	font-size: 14px;
+}
+
+.loginInputWrap .otherLogin {
+	margin: 28px 0 0 180px;
+	overflow: hidden;
+}
+
+.loginInputWrap .otherLogin a {
+	float: left;
+	margin-right: 40px;
+	height: 30px;
+	padding-left: 40px;
+	line-height: 30px;
+	color: #666666;
+	font-size: 14px;
+	position: relative;
+}
+
+.loginInputWrap .otherLogin .tsinalogin .icon {
+	background-position: 0 -20px;
+}
+
+.loginInputWrap .otherLogin a .icon {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 30px;
+	width: 32.6px;
+	background: url('../images/registloginSprit.png') no-repeat;
+}
+
+.loginInputWrap .otherLogin .qqlogin .icon {
+	background-position: -32px -20px;
+}
+
+.loginInputWrap .otherLogin .wxlogin .icon {
+	background-position: -64px -20px;
+}
+.loginInputWrap .inputItem.focus .megTip {
+	color: #666;
+	display: block;
+}
+
+.loginRegistFoot {
+	background: #f6f4f5;
+	overflow: hidden;
+}
+
+.loginRegistFoot .footNav {
+	padding-top: 46px;
+}
+
+.loginRegistFoot .footNav ul {
+	overflow: hidden;
+	width: 480px;
+	margin: auto;
+}
+
+.loginRegistFoot .footNav ul li {
+	background: url('../images/loginRegistfootline.jpg') no-repeat right
+		center;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	width: 120px;
+	text-align: center;
+}
+
+.loginRegistFoot .footNav ul li a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.credit_certifica {
+	overflow: hidden;
+	float: left;
+	display: inline;
+	margin-left: 90px;
+}
+
+.licence {
+	float: left;
+	color: #333;
+	display: inline;
+	margin-left: 18px;
+	line-height: 20px;
+}
+
+.licence p a {
+	color: #333;
+	margin-right: 10px;
+}
+
+.certifica {
+	margin-top: 20px;
+	margin-left: 66px;
+}
+
+.certifica a:hover {
+	text-decoration: underline;
+	color: #e70b1c;
+}
+
+.loginRegistFoot .footNav ul li a:hover {
+	color: #e60000;
+}
+
+.autoLogin {
+	padding-left: 236px;
+}
+
+.autoLogin span {
+	font-size: 19px;
+	font-weight: bold;
+	color: #333;
+}
+
+.loginInputWrap .inputItem.error .megTip {
+	color: #e60000;
+	display: block;
+}
+
+.loginInputWrap .inputItem.error .inputWrap {
+	border: 1px solid #e60000;
+}

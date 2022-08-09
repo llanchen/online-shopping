@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seehope.dao.ProMapper">
+   <select id="findPros" resultType="hashMap">
+       select * from pro
+       <where>
+           <if test="pName != null and ! ''.equals(pName)">
+           and pName like '%' #{pName} '%'
+           </if>
+
+           <if test="pSn != null and ! ''.equals(pSn)">
+               and pSn like '%' #{pSn} '%'
+           </if>
+
+           <if test="cid != null and ! ''.equals(cid)">
+               and cid like '%' #{cid} '%'
+           </if>
+
+           <if test="minPrice != null and ! ''.equals(minPrice)">
+               and iPrice &gt; #{minPrice}
+           </if>
+
+           <if test="maxPrice != null and ! ''.equals(maxPrice)">
+               and iPrice &lt; #{maxPrice}
+           </if>
+       </where>
+   </select>
+
+    <select id="findPname" resultType="string">
+        select distinct pName from pro where cid=#{cid}
+    </select>
+
+    <select id="findpSn" resultType="string">
+        select pSn from pro where pSn like '%' #{pSn} '%'
+    </select>
+
+    <select id="findId" resultType="pro">
+        select * from pro where id=#{id}
+    </select>
+
+    <update id="updateProNum" parameterType="msoxq">
+        update pro set pNum=pNum-#{count},isHot=isHot+${count} where id=#{proid}
+    </update>
+
+
+</mapper>

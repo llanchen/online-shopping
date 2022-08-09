@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seehope.dao.CommentMapper">
+    <insert id="addComment">
+        insert into comment(comments,proid,score,userid) values (#{comments},#{proid},#{score},#{userid})
+    </insert>
+
+    <select id="searchComments" resultType="comment">
+        select c.*,u.username from comment c left join user u on c.userid=u.id where proid=#{proid}
+    </select>
+
+
+</mapper>

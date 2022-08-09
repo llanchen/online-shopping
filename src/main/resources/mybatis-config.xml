@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+
+    <typeAliases>
+        <!--给对应包的实体类都起别名，别名是小写开头（大小写都可以）-->
+        <package name="com.seehope.entity"/>
+
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库 -->
+            <property name="helperDialect" value="mysql" />
+        </plugin>
+    </plugins>
+
+
+
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--加载映射文件-->
+<!--    <package name="com.seehope.mapper"/>-->
+    <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/ProMapper.xml"></mapper>
+        <mapper resource="mapper/CommentMapper.xml"></mapper>
+        <mapper resource="mapper/MsoMapper.xml"></mapper>
+        <mapper resource="mapper/ProMapper.xml"></mapper>
+    </mappers>
+
+
+</configuration>

@@ -1,0 +1,149 @@
+.row{margin-right: 0}
+.header_logo{
+    margin-top: 25px;
+    margin-right: 5px;
+    padding: 10px;
+    font-family: "Microsoft YaHei UI";
+    font-weight: bold;
+    font-size: 15px;width:40px;border-radius: 50%;height:40px;  display:inline-block; color:#FFF;
+    text-align:center;background-color: #FF2A21;
+}
+.header_logo_content{
+    margin-left: 5px;margin-right: 30px;
+}
+#headerBar{border-bottom:2px solid red;}
+
+#myform .form-group{
+    padding: 10px;
+    margin-left:200px;
+}
+.cart_table td:not(:nth-of-type(2)){
+     padding-top: 26px;
+}
+/*椤堕儴缁撴潫*/
+#page_main{
+    height: 500px;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+.cart_empty{
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    top: 60px;
+    left: 290px;
+background: #f5f5f5 url("../images/cart-empty.png") no-repeat -36px 0px;
+}
+.cart_empty .content{
+    position: absolute;
+    right: 90px;
+    top: 120px;
+    height: 200px;
+    padding-left: 10px;
+
+}
+.cart_empty h2{
+    color: #b0b0b0;
+    font-weight: bold;
+    font-size: 36px;
+}
+.cart_empty p{
+    color: #b0b0b0;
+    font-size: 19px;
+}
+.cart_empty .btn_primary{
+    margin-top: 10px;
+    display: inline-block;
+    background: #ff6700;
+    border:1px solid #ff6700 ;
+    color: #fff;
+    width: 170px;
+    height: 49px;
+    line-height: 49px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+.cart_empty .btn_login{
+    margin-right: 10px;
+}
+.cart_empty .btn_goshoping{
+    background: #f5f5f5;
+    color: #ff6700;
+}
+/*鍥句功鎺ㄨ崘寮�*/
+.book-recommand-title{
+    position: relative;
+    margin: 0;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #757575;
+    border-top:1px solid #e0e0e0;
+}
+.book-recommand-title span{
+    position: absolute;
+    z-index: 999;
+    top: -30px;
+    left: 372px;
+    height: 40px;
+    width: 482px;
+    display: block;
+    line-height: 40px;
+    background: #f5f5f5;
+    text-align: center;
+}
+#book-recommand{
+    background: #f5f5f5;
+    margin-top: -50px;
+}
+#book-recommand ul{
+    margin-top: 20px;
+}
+#book-recommand ul li{
+    padding-top: 14px;
+    background-color: #fff;
+    width: 210px;
+    height: 300px;
+    margin-left: 36px;
+    margin-top: 10px;
+}
+#book-recommand ul li:hover{
+    box-shadow: 0px 0px 3px #ff6700;
+    border-radius: 5px;
+}
+#book-recommand .recommand_image{
+    margin-left: 30px;
+}
+#book-recommand p{
+   line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+#book-recommand p span{
+    color: #ff6700;
+}
+#book-recommand .recommand_bookname{
+    text-decoration: none;
+    color: #333;
+}
+#book-recommand .recommand_book_add{
+  text-decoration: none;
+    width: 120px;
+    color: #ff6700;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+   padding: 10px 20px;
+}
+/*璐墿杞﹂�涓牱寮�/
+.cart_table tr.not-selected{
+    background-color: #fffcf3;
+}
+.cart_table tr.selected{
+    background-color: #fff9e7;
+}
+#float_bar span{
+    cursor: pointer;
+    margin-right: 15px;
+}

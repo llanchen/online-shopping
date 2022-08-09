@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seehope.dao.MsoMapper">
+    <insert id="addMso" parameterType="mso">
+        insert into mso(msoid,msoname,telephone,msoTime,paystate,msomoney,address,userid) values (#{msoid},
+        #{msoname},#{telephone},#{msoTime},#{paystate},#{msomoney},#{address},#{userid})
+    </insert>
+
+    <insert id="addMsoxq" parameterType="msoxq">
+        insert into msoxq(msoid,count,proid)values (#{mso.msoid},#{count},#{pro.id})
+    </insert>
+
+    <select id="findMsosByUserId" resultType="mso">
+        select * from mso where userid=#{userid}
+    </select>
+
+    <!--ofType一对多-->
+    <resultMap id="msoMap" type="mso">
+        <id column="msoid" property="msoid"></id>
+        <result column="msoname" property="msoname"></result>
+        <result column="telephone" property="telephone"></result>
+        <result column="address" property="address"></result>
+        <result column="msoTime" property="msoTime"></result>
+        <result column="paystate" property="paystate"></result>
+        <result column="msomoney" property="msomoney"></result>
+        <result column="userid" property="userid"></result>
+        <result column="deliveryState" property="deliveryState"></result>
+        <collection property="msoxqs" ofType="msoxq">
+            <id column="xqid" property="xqid"></id>
+            <result column="msoid" property="msoid"></result>
+            <result column="count" property="count"></result>
+            <result column="proid" property="proid"></result>
+            <association property="pro" javaType="pro">
+                <id column="id" property="id"></id>
+                <result column="pName" property="pName"></result>
+                <result column="pSn" property="pSn"></result>
+                <result column="pImg" property="pImg"></result>
+                <result column="iPrice" property="iPrice"></result>
+            </association>
+        </collection>
+    </resultMap>
+
+    <!--resultMap涉及到两表或多表联查-->
+    <select id="findMsoByMsoid" resultMap="msoMap">
+        select * from mso,msoxq,pro where mso.msoid=msoxq.msoid and msoxq.proid=pro.id and mso.msoid=#{msoid}
+    </select>
+
+    <select id="delMso">
+        delete from mso where msoid=#{msoid}
+    </select>
+
+    <select id="delMsoxq">
+        delete from msoxq where msoid=#{msoid}
+    </select>
+
+    <update id="updateMsoPayState">
+        update mso set paystate='已付款' where msoid=#{msoid}
+    </update>
+
+    <update id="updateMsoDeliveryState">
+        update mso set deliveryState='已发货' where msoid=#{msoid}
+    </update>
+</mapper>
